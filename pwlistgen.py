@@ -27,7 +27,7 @@ def _get_chars_alphanumeric_upper():
 def _get_chars_alphanumeric_both():
     return string.ascii_letters + string.digits
 
-# Function to save password list to a file
+# Function to save password list to a file.
 def _save_list_to_file(password_list, filename, directory="wordlist"):
     """Saves the given password list to a file in the specified directory."""
     if not filename:
@@ -278,7 +278,7 @@ if __name__ == "__main__":
                             elif output_filename is None and command_input.startswith("set output"): # User cleared output, then generated
                                 pass # Don't attempt to save
                             
-                    elif isinstance(password_gen_result, str): # This means an error message string was returned
+                    elif isinstance(password_gen_result, str): 
                         print(password_gen_result)
                 print("-" * 40)
             else:
@@ -291,4 +291,5 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"[!] Error: {e}")
             print("-" * 40)
+
 
